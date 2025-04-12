@@ -1,2 +1,2 @@
-# -DCF_MODULE
-STOCK VALUATION TOOL USING DCF
+#DISCOUNTED CASH FLOW MODULE
+This is a stock valuation tool that helps find the intrinsic value of an investment.
