@@ -7,10 +7,10 @@ Checklist:
 - [x] Open Sprint 1 and Submit it.
 - [x] Rewatch inspring tutorial & initiate Coding
 - [x] Attain a draft of code
-- [] Check for errors
-- [] Fix errors
-- [] Sprint 2
-- [] Revise and test code
-- [] Sprint 3
-- [] Powerpoint
-- [] Present
+- [ ] Check for errors
+- [ ] Fix errors
+- [ ] Sprint 2
+- [ ] Revise and test code
+- [ ] Sprint 3
+- [ ] Powerpoint
+- [ ] Present
