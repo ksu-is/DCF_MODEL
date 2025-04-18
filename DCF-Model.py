@@ -10,23 +10,11 @@ import pandas as pd
 import datetime
 import time 
 import numpy as np
-
-from yahooquery import ticker
-
-
-# In[29]:
-
-
-pd.set.option('display.max_rows',None)
-
-#### show full rows
-
-
-# In[31]:
-
-
+from yahooquery import Ticker 
+pd.set_option('display.max_rows',None)
 symbol = 'AAPL'
 stock = Ticker(symbol)
+print(stock.cash_flow())
 
 
 # In[49]:
