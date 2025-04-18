@@ -23,10 +23,11 @@ print(stock.cash_flow())
 ###Get  Historical FCP (cre8 simple forcast of future FCF based on previous FCP grwoth raio.
 
 df_cash = pd.DataFrame(stock.cash_flow())
+print(df_cash.columns)
 df_cash['asOfDate'] = pd.to_datetime(df_cash['asOfDate'])
 df_cash.set_index('asOfDate', inplace = True)
 df_cash = df_cash.sort_index()
-df_cash = df_cash[['freeCashFlow']].dropna()
+df_cash = df_cash[['FreeCashFlow']].dropna()
 
 
 # In[35]:
