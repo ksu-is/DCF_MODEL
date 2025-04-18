@@ -8,8 +8,9 @@ Checklist:
 - [x] Rewatch inspring tutorial & initiate Coding
 - [x] Attain a draft of code
 - [x] Check for errors
+- [x] Fix errors
 - [x] Add requierments.txt repo
-- [ ] Fix errors
+- [x] License
 - [ ] Sprint 2
 - [ ] Revise and test code
 - [ ] Sprint 3
