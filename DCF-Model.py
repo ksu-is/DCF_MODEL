@@ -35,7 +35,7 @@ df_cash = df_cash[['FreeCashFlow']].dropna()
 
 ##### get historic net debt
 
-df_balance= pd.DateFrame(stock.balance_sheet())
+df_balance= pd.DataFrame(stock.balance_sheet())
 df_balance['asOfDate'] = pd.to_datetime(df_balance['asOfDate'])
 df_balance.set_index('asOfDate',inplace=True)
 
