@@ -49,9 +49,8 @@ print(df_balance)
 
 
 ####net debt value
-net_debt = df_balance['netDebt'].iloc[-1]
-
-
+net_debt = df_balance['NetDebt'].iloc[-1]
+print("Most recent Net Debt value:" , net_debt)
 
 # In[47]:
 
