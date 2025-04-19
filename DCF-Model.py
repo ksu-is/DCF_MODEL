@@ -41,6 +41,8 @@ df_balance.set_index('asOfDate',inplace=True)
 
 df_balance = df_balance.sort_index()
 df_balance = df_balance[['NetDebt']].dropna()
+print(df_balance)
+
 
 
 # In[45]:
