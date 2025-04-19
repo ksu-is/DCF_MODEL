@@ -40,7 +40,7 @@ df_balance['asOfDate'] = pd.to_datetime(df_balance['asOfDate'])
 df_balance.set_index('asOfDate',inplace=True)
 
 df_balance = df_balance.sort_index()
-df_balance = df_balance[['netDebt']].dropna()
+df_balance = df_balance[['NetDebt']].dropna()
 
 
 # In[45]:
