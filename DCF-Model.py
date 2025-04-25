@@ -66,7 +66,7 @@ def column_to_list(df,column_name):
 
 ####
 historic_fcf = column_to_list(df_cash, 'FreeCashFlow')
-print("Historical Free Cash Flow list:", historic_fcf)
+print("Historical Free Cash Flow list:", historic_fcf) ###this prints historical cash flow list.
 
 
 
