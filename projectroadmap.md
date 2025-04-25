@@ -11,8 +11,8 @@ Checklist:
 - [x] Fix errors
 - [x] Add requierments.txt repo
 - [x] License
-- [ ] Sprint 2
-- [ ] Revise and test code
+- [x] Sprint 2
+- [x] Revise and test code
 - [ ] Sprint 3
 - [ ] Powerpoint
 - [ ] Present
