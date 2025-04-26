@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[25]:
-
-
 #use pandas, datetime, and time.
 
 import pandas as pd
@@ -16,10 +13,6 @@ symbol = 'AAPL'
 stock = Ticker(symbol)
 print(stock.cash_flow())
 
-
-# In[49]:
-
-
 ###Get  Historical FCP (cre8 simple forcast of future FCF based on previous FCP grwoth raio.
 import pandas as pd
 df_cash = pd.DataFrame(stock.cash_flow())
@@ -29,10 +22,6 @@ df_cash.set_index('asOfDate', inplace = True)
 df_cash = df_cash.sort_index()
 df_cash = df_cash[['FreeCashFlow']].dropna()
 print(df_cash.tail())
-
-
-# In[35]:
-
 
 ##### get historic net debt
 
@@ -44,17 +33,9 @@ df_balance = df_balance.sort_index()
 df_balance = df_balance[['NetDebt']].dropna()
 print(df_balance.tail())
 
-
-
-# In[45]:
-
-
 ####net debt value
 net_debt = df_balance['NetDebt'].iloc[-1]
 print("Most recent Net Debt value:" , net_debt)
-
-# In[47]:
-
 
 ###create a convert LIST FUNCTION FOR FUTURE WRANGLING
 
@@ -63,20 +44,11 @@ def column_to_list(df,column_name):
     data_list = [x for x in data_list if pd.notnull(x)]
     return data_list
 
-
 ####
 historic_fcf = column_to_list(df_cash, 'FreeCashFlow')
 print("Historical Free Cash Flow list:", historic_fcf) ###this prints historical cash flow list.
 
-
-
-# In[41]:
-
-
 ####CALC AVG GROWTH RATE OF FCF FOR SIMPLE FORECASTING
-
-
-
 fcf_growth_rates = [(historic_fcf[i] - historic_fcf[i-1]) / historic_fcf[i-1] for i in range(1, len(historic_fcf))]
 fcf_avg_growth_rate = np.mean(fcf_growth_rates)
 print("Year-over-Year Free Cash Flow Growth Rates:")
@@ -84,17 +56,6 @@ for i, rate in enumerate(fcf_growth_rates, start=1):
     print(f"From year {i} to {i+1}: {rate:.2%}")
 
 print(f"\nAverage FCF Growth Rate : {fcf_avg_growth_rate:.2%}")
-
-
-
-
-
-
-
-
-
-# In[43]:
-
 
 #####Future projections###
 
