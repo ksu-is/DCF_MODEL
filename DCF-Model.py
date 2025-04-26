@@ -77,8 +77,14 @@ print("Historical Free Cash Flow list:", historic_fcf) ###this prints historical
 
 
 
-fcf_growth_rates = [(historic_fcf[i] - historic_fcf[i-1]) / historic_fcf[i-1] for i in range[1, len(historic_fcf))]
+fcf_growth_rates = [(historic_fcf[i] - historic_fcf[i-1]) / historic_fcf[i-1] for i in range(1, len(historic_fcf))]
 fcf_avg_growth_rate = np.mean(fcf_growth_rates)
+print("Year-over-Year Free Cash Flow Growth Rates:")
+for i, rate in enumerate(fcf_growth_rates, start=1):
+    print(f"From year {i} to {i+1}: {rate:.2%}")
+
+print(f"\nAverage FCF Growth Rate : {fcf_avg_growth_rate:.2%}")
+
 
 
 
