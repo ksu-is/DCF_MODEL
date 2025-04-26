@@ -13,6 +13,6 @@ Checklist:
 - [x] License
 - [x] Sprint 2
 - [x] Revise and test code
-- [ ] Sprint 3
-- [ ] Powerpoint
+- [x] Sprint 3
+- [x] Powerpoint
 - [ ] Present
