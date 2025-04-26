@@ -96,7 +96,7 @@ print(f"\nAverage FCF Growth Rate : {fcf_avg_growth_rate:.2%}")
 # In[43]:
 
 
-s#####Future projections###
+#####Future projections###
 
 #forecast future FCFS
 future_years = 5
@@ -104,19 +104,23 @@ future_fcfs = [historic_fcf[-1]*(1+fcf_avg_growth_rate)**(i+1) for i in range(fu
 
 #discount future FCF
 discount_rate = 0.10
-discount_fcfs = [fcf / (1 + discount_rate) ** (i+1) for i, fcf in enumerate(future_fcfs)]
+discounted_fcfs = [fcf / (1 + discount_rate) ** (i+1) for i, fcf in enumerate(future_fcfs)]
 
 # clc TERMINAL VALUE
-termina_value = future_value / (1 + discount_rate) **future_years
+terminal_value = future_fcfs[-1] * (1 + fcf_avg_growth_rate) / (discount_rate - fcf_avg_growth_rate)
+
+#add: disocunt the terminal value 
+discounted_terminal_value = terminal_value / (1 + discount_rate) ** future_years
 
 # calc Total Enterprise Value 
-enterprise_value = sum(disocunted_fcfs + discounted_terminal_value)
+enterprise_value = sum(discounted_fcfs) + discounted_terminal_value
 
 #subtract net debt to get equity value
+net_debt = 500000000
 equity_value = enterprise_value - net_debt
 
-print("Enterprise Value: ${enterprise_value:, .2f}")
-print(f"Equity Value: ${equity_value:, 2f}")
+print("Enterprise Value: ${enterprise_value:,.2f}")
+print(f"Equity Value: ${equity_value:,.2f}")
 
 
 
