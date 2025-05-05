@@ -15,4 +15,4 @@ Checklist:
 - [x] Revise and test code
 - [x] Sprint 3
 - [x] Powerpoint
-- [ ] Present
+- [x] Present
